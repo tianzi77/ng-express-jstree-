@@ -1,0 +1,95 @@
+.tree-browser {
+    overflow: auto;
+}
+
+.file-viewer {
+    padding-left: 50px;
+    overflow: auto;
+}
+
+.jstree-custom-folder {
+    background-image: url('../imgs/folder.png') !important;
+    background-position: 0 !important;
+}
+
+.jstree-custom-file {
+    background-image: url('../imgs/file.png') !important;
+    background-position: 0 !important;
+}
+
+.corp-title {}
+
+.corp-title a {
+    margin-left: 20px;
+}
+
+.scroll-top-btn {
+    position: fixed;
+    display: none;
+    width: 80px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    color: #00a5e0;
+    border: 1px solid #2196f3;
+    text-decoration: none;
+}
+
+.scroll-top-btn {
+    bottom: 20px;
+    left: 50%;
+    margin-left: 570px;
+}
+
+.scroll-top-btn:hover,
+.scroll-top-btn:focus {
+    text-decoration: none;
+}
+
+.demo-click {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    margin-left: 570px;
+    width: 80px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    color: #00a5e0;
+    border: 1px solid #2196f3;
+    text-decoration: none;
+    background-color: transparent;
+    border-bottom: 0 none;
+    border-radius: 0;
+    padding: 0;
+    display: none;
+    transition: all .3s;
+}
+
+.demo-show {
+    bottom: 60px;
+    display: block;
+}
+
+.nolink {
+    pointer-events: none;
+}
+
+body {
+    min-height: 100%;
+    box-sizing: border-box;
+    padding-bottom: 120px;
+    position: relative;
+}
+
+.footer {
+    width: 100%;
+    height: 120px;
+    line-height: 120px;
+    text-align: center;
+    font-size: 24px;
+    background-color: deeppink;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}

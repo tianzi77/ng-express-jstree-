@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html ng-app="fileBrowserApp">
+
+<head>
+    <meta charset="utf-8" auther="weiwzhang@Ctrip.com">
+    <title>携程商旅高保真原型展示-</title>
+
+    <link rel="stylesheet" type="text/css" href="/libs/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/jstree/themes/default/style.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/app.css">
+    <link rel="stylesheet" type="text/css" href="/css/lofi.css">
+    <script src="/libs/angular/angular.min.js"></script>
+    <script src="/libs/angular-route/angular-route.min.js"></script>
+
+    <script src="/libs/jquery/dist/jquery.min.js"></script>
+    <script src="/jstree/jstree.min.js"></script>
+
+    <script src="/libs/jstree-directive/jsTree.directive.js"></script>
+
+    <script src="/js/app.js"></script>
+    <script type="text/javascript" src="/js/factory.js"></script>
+    <script src="/js/controllers.js"></script>
+
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.3/styles/github.min.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.3/highlight.min.js"></script>
+    <script src="http://pc035860.github.io/angular-highlightjs/angular-highlightjs.js"></script>
+</head>
+
+<body class="">
+    <ng-include src=" '/api/resource?resource=E:\\vhifi\\client\\partials\\header.html' " ></ng-include>
+    <div class="container">
+    <h1 class="corp-title"><span>Corp原型目录</span><p class="pull-right"><a href="###" target="_blank" class="btn btn-info">演示</a></p></h1>
+    <div class="clearfix"></div>
+    <hr>
+    <ng-view></ng-view>
+    </div>
+    <ng-include src=" '/api/resource?resource=E:\\vhifi\\client\\partials\\footer.html' " ></ng-include>
+    <a href="###" target="_blank" class="btn btn-info demo-click">演示</a>
+    <a href="#" class="scroll-top-btn" style="display: inline;">回到顶部</a>
+    <script>
+        /**
+         * @author      : weiwzhang@Ctrip.com
+         * @editor      : Sublime Text
+         * @updated     : 2016.11.30
+         * @description : corp hifi
+         *
+         */
+        ;
+        (function ($, global) {
+            var docs = (function () {
+                var tp_btn = $('.scroll-top-btn'),
+                    nav_h = 70;
+                return {
+                    // top
+                    Totop: function () {
+                        tp_btn.on('click', function () {
+                            $('html,body').animate({
+                                scrollTop: '0px'
+                            }, 600);
+                            return false;
+                        })
+                    },
+                    // scrool
+                    windowScroll: function () {
+                        $(window).scroll(function () {
+                            if ($(window).scrollTop() >= 100) {
+                                $('.demo-click').addClass('demo-show');
+                            } else {
+                                $('.demo-click').removeClass('demo-show');
+                            }
+                        })
+                    },
+                    // 统一执行
+                    init: function () {
+                        this.Totop();
+                        this.windowScroll();
+                    }
+                };
+            })();
+            $(function () {
+                docs.init();
+            });
+        })(jQuery, this);
+    </script>
+</body>
+
+</html>

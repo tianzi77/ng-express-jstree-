@@ -1,0 +1,19 @@
+<style>
+    pre {
+        font-size: 14px;
+    }
+</style>
+
+<div ng-controller="HomeCtrl">
+    <div class="row">
+        <div class="col-md-4 tree-browser">
+            <js-tree tree-events="select_node:nodeSelected" tree-ajax="/api/tree" tree-core="tree_core" tree-plugins="dnd"></js-tree>
+        </div>
+        <div class="col-md-8 file-viewer" hljs
+    hljs-source=fileViewer>
+<!--            <pre><code>{{fileViewer}}</pre></code>-->
+        </div>
+    </div>
+
+</div>
+
